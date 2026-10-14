@@ -1,0 +1,7 @@
+# https://progclubiitm.com/robots.txt
+# Programming Club, IIT Madras
+
+User-agent: *
+Allow: /
+
+Sitemap: https://progclubiitm.com/sitemap.xml

@@ -1,0 +1,139 @@
+/* Brand typefaces are loaded via <link> in index.html — Sora, DM Sans,
+   IBM Plex Mono and Fira Code, per the PC design doc. */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1, .prose h1 {
+    @apply font-sora font-bold;
+  }
+
+    /* Enforce Sora Medium for H2 */
+  h2, .prose h2 {
+    @apply font-sora font-medium;
+  }
+
+    /* Enforce DM Sans Medium for H3 */
+  h3, .prose h3 {
+    @apply font-sans font-medium;
+  }
+
+  /* Fira Code is the doc's code face; IBM Plex Mono stays the UI/label mono */
+  code, pre, kbd, samp {
+    @apply font-code;
+  }
+
+  body {
+    @apply bg-background text-textMain font-sans antialiased selection:bg-primary/30;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  /* ── Brand gradient fill: Medium Aquamarine → Liberty Blue, per the design doc.
+        The one sanctioned gradient for display type. ── */
+  .text-gradient-brand {
+    @apply text-transparent bg-clip-text;
+    background-image: linear-gradient(100deg, #30bda5 0%, #26a5ac 48%, #1684b1 100%);
+  }
+
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .glass-nav {
+    @apply bg-surface/70 backdrop-blur-md border-b border-white/10;
+  }
+
+  .glass-card {
+    @apply bg-surface/50 backdrop-blur-sm border border-white/10 rounded-xl transition-all duration-300 hover:border-primary/50 hover:bg-surface/80;
+  }
+
+  .btn-primary {
+    @apply px-6 py-2 rounded-lg bg-primary text-background font-semibold transition-all duration-300 hover:bg-primary/85 hover:shadow-[0_0_18px_rgba(48,189,165,0.45)];
+  }
+
+  .btn-outline {
+    @apply px-6 py-2 rounded-lg border border-primary text-primary font-medium transition-all duration-300 hover:bg-primary/10;
+  }
+
+  .btn-highlight {
+    @apply px-6 py-2 rounded-lg border border-highlight/60 text-highlight font-medium transition-all duration-300 hover:bg-highlight/10;
+  }
+
+  /* ── Glass panel: wraps an entire team section ── */
+  .glass-panel {
+    @apply relative bg-surface/40 backdrop-blur-md border border-white/[0.07] rounded-2xl;
+  }
+
+  /* ── Flip card system ── */
+  .flip-card {
+    perspective: 800px;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  /* ── Glow ring: animated gradient border around avatars ── */
+  .glow-ring {
+    @apply relative;
+  }
+  .glow-ring::before {
+    content: '';
+    @apply absolute -inset-[3px] rounded-full animate-pulse-glow;
+    background: conic-gradient(
+      from 0deg,
+      #30bda5,
+      #1684b1,
+      #86c440,
+      #30bda5
+    );
+    z-index: -1;
+  }
+  .glow-ring::after {
+    content: '';
+    @apply absolute -inset-[1px] rounded-full;
+    background: #0a0a0a;
+    z-index: -1;
+  }
+
+  /* ── Section divider: gradient line between team sections ── */
+  .section-divider {
+    @apply h-px w-full max-w-xs mx-auto;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(48, 189, 165, 0.3),
+      rgba(22, 132, 177, 0.3),
+      transparent
+    );
+  }
+}
