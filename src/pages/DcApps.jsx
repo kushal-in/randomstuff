@@ -23,7 +23,7 @@ export default function DcApps() {
 
   const raw = st.answers || {};
   const cleanRoll = (raw.roll || '').trim().toUpperCase();
-  const expectedSmail = cleanRoll ? `\${cleanRoll.toLowerCase()}@smail.iitm.ac.in` : '';
+  const expectedSmail = cleanRoll ? `${cleanRoll.toLowerCase()}@smail.iitm.ac.in` : '';
   const a = { ...raw, email: expectedSmail };
 
   const [otpState, setOtpState] = useState({ sent: false, verifiedRoll: null, code: '' });
@@ -90,7 +90,7 @@ export default function DcApps() {
     }
 
     if (enteredEmail !== expectedSmail) {
-      alert(`Roll number and Smail mismatch!\n\nRoll: \${cleanRoll}\nExpected: ${expectedSmail}\nEntered:${enteredEmail}`);
+      alert(`Roll number and Smail mismatch!\n\nRoll: ${cleanRoll}\nExpected: ${expectedSmail}\nEntered:${enteredEmail}`);
       return;
     }
 
