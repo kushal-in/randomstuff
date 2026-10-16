@@ -45,7 +45,7 @@ A two-pointer algorithm usually requires a linear data structure such as an arra
 
 ## **Real-World Example: Garbage Collection**
 
-In memory compaction, a key part of garbage collection, the goal is to free contiguous memory by eliminating the gaps left by deallocated (dead) objects. A 'scan' pointer traverses the heap to identify live objects, while a 'free' pointer tracks the next available space where live objects should be relocated. As 'scan' moves, it skips dead objects and shifts live ones to the position of 'free', grouping all live objects together and leaving continuous blocks of free memory.
+In memory compaction, a key part of garbage collection, the goal is to free contiguous memory by eliminating the gaps left by deallocated (dead) objects. A 'scan' pointer traverses the heap to identify live objects, while a 'free' pointer tracks the next available space where live objects should be relocated. As 'scan' moves, it skips dead objects and shifts live ones to the position of 'free', grouping all live objects together and leaving continuous blocks of free memory. (Unlike Chrome, which just takes it all)
 
 ## **Unidirectional**
 

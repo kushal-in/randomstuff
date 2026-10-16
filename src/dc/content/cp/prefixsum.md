@@ -13,7 +13,7 @@ The prefix sum technique is a very useful trick in competitive programming. The 
 
 ## **Main Technique**
 
-Without preprocessing, the sum of a range a[l..r] takes O(n) time, so answering q queries takes O(n·q). With prefix sums, building p takes O(n) once and every query takes O(1). There are two main forms:
+Without preprocessing, the sum of a range a[l..r] takes O(n) time, so answering q queries takes O(n·q). Your code will hit a TLE faster than you realize. With prefix sums, building p takes O(n) once and every query takes O(1). There are two main forms:
 
 ### **1. One-Dimensional**
 

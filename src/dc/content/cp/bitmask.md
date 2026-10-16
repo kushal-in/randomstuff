@@ -39,6 +39,10 @@ Some of the most commonly used bitwise operations in bit-masking are:
 
 - **Right Shift (>>)** – shifts bits to the right.
 
+<Hint title="Python/C++ Warning">
+If you use `^` thinking it's the exponentiation operator, you are going to have a very weird time. It is strictly for XOR.
+</Hint>
+
 you might go through this to learn about various bit wise operator: [https://www.geeksforgeeks.org/dsa/complete-reference-for-bitwise-operators-in-programming-coding/](https://www.geeksforgeeks.org/dsa/complete-reference-for-bitwise-operators-in-programming-coding/)
 
 ## **MASK**

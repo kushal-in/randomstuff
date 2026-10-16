@@ -7,6 +7,9 @@ order: 100
 ---
 
 
+
+<Fig src="/assets/meme2.jpeg" width="50%" />
+
 # Competitive Programming
 
 The CP section is divided into **4 main sections + 1 bonus section**.

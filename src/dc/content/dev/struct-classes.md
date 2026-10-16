@@ -375,6 +375,9 @@ type: reading
 
 A very fundamental property of OOP. Similar to how a child might *inherit* certain behaviours and characteristics from his/her parents, C++ classes can also have parents from whom they *inherit* behaviours and properties. This also promotes laziness as we can just reuse parts of a predefined class.
 
+<Fig src="/assets/meme6.jpeg" width="50%"  />
+
+
 How do we implement this? We use the : symbol followed by an access specifier and the name of the parent class. The class that inherits is called the **derived class** (child), while the class being inherited from is called the **base class** (parent).
 
 One small example for this

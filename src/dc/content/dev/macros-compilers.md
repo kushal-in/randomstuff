@@ -208,6 +208,9 @@ Because a build is really four stages chained together, an error tells you somet
 
 The previous section covered the preprocessor's most common job - expanding `#include` by pasting file contents into the source file. Its other major job is expanding **macros**. These are text substitutions defined with `#define`, performed before your code is type-checked or even fully parsed. Macros predate most of the language features C++ now offers for the same purposes. The goal of this section is to understand where they're still useful and where they've been replaced by other, better alternatives.
 
+<Fig src="/assets/meme5.jpeg" width="50%" />
+
+
 ### Object-like macros
 
 The simplest form just substitutes one token for another:

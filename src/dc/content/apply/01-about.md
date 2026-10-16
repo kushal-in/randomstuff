@@ -23,6 +23,9 @@ As a Deputy Coordinator, you'll work with the Programming Club Coordinators thro
 
 The goal is to learn, build, and get better alongside people who enjoy doing the same.
 
+
+<Fig src="/assets/meme7.jpeg" width="70%" />
+
 ---
 
 # Before You Begin
@@ -41,6 +44,7 @@ We care more about **how you approach problems** than how much you complete. Giv
 - If something is unclear, **ask us**.
 
 Most importantly, **give it a try**. You don't need to be great at everything here.
+
 
 
 
@@ -109,6 +113,12 @@ required: true
 ---
 Which was your favorite session/event among those conducted till date? Why?
 
+---
+id: comments
+type: long-text
+required: true
+---
+Convince us that comments in code are essential. We’ll be checking whether you practice what you preach.
 ---
 id: funfact
 type: long-text

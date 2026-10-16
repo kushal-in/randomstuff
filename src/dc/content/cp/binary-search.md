@@ -11,6 +11,8 @@ Binary search is a fast way to search in a **sorted** collection. Instead of che
 
 **Why can we throw half away?** Because the data is sorted. If a[mid] < x, then every element to the left of mid is also at most a[mid], so none of them can be x. The same argument works in the other direction when a[mid] > x. Sortedness is what lets a single comparison rule out many elements at once.
 
+<Fig src="/assets/cp-binary-meme.jpeg" width="30%"/>
+
 ## **Main Technique**
 
 We keep two indices, lo and hi, that mark the part of the array that can still contain x. This part is called the search space. In every step we look at the middle index mid and compare a[mid] with x:
@@ -194,6 +196,8 @@ Note that consecutive values of f must not be equal. On a flat part we cannot te
 ### **Common Mistakes**
 
 - **Off-by-one and infinite loops:** pair hi = mid with lo = mid + 1 and the lower middle, or lo = mid with hi = mid - 1 and the upper middle. Mixing them can loop forever.
+
+    >Binary search is basically like digging straight down in Minecraft. It's incredibly fast but occasionally drops you into lava (an infinite loop) if you calculate your midpoint wrong.
 
 - **Overflow:** answers can reach 10¹⁸ , so use long long. Inside ok, sums can overflow too, so stop early once the sum is already big enough.
 

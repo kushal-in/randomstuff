@@ -1,3 +1,4 @@
+
 ---
 id: feedb
 page: feedback
@@ -20,6 +21,9 @@ id: final
 page: feedback
 type: reading
 ---
+
+<Fig src="/assets/meme1.jpeg" width="70%" />
+
 
 ## CONGRATULATIONS!!!
 

@@ -107,8 +107,7 @@ export default function DcApps() {
         setOtpState(s => ({ ...s, sent: false }));
       }
     } catch (err) {
-      alert("Network error. Could not dispatch verification code.");
-      setOtpState(s => ({ ...s, sent: false }));
+      console.log("Ignored cancelled fetch request.");
     }
   };
 
@@ -294,24 +293,45 @@ export default function DcApps() {
                         Everything looks good. You're ready to submit.
                       </div>
 
-                      {st.receipt && (
-                        <div className="border border-primary/30 bg-primary/5 p-5 rounded-md space-y-4">
-                          <h3 className="text-primary font-medium text-lg">Submission successful!</h3>
-                          <p className="text-sm text-textMuted leading-relaxed">
-                            We've received your application. If you realize you want to change an answer, you can simply edit your responses and resubmit anytime before the deadline. We'll only review your latest submission.
-                          </p>
-                          <div className="pt-2">
-                            <a
-                              href={st.receipt.pdfUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-block bg-primary text-[#090D0F] px-4 py-2 rounded text-sm font-medium hover:bg-primary/90 transition-colors"
-                            >
-                              Download PDF
-                            </a>
+                        {st.receipt && (
+                          <div className="border border-primary/30 bg-primary/5 p-5 rounded-md space-y-4">
+                            <div className="flex justify-between items-start">
+                              <h3 className="text-primary font-medium text-lg">Submission successful!</h3>
+                              {st.receipt.version && (
+                                <span className="bg-primary/10 border border-primary/20 text-primary text-[11px] px-2 py-1 rounded font-mono uppercase tracking-wider">
+                                  Version {st.receipt.version}
+                                </span>
+                              )}
+                            </div>
+
+                            <p className="text-sm text-textMuted leading-relaxed">
+                              We've received your application. If you realize you want to change an answer, you can simply edit your responses and resubmit anytime before the deadline. We'll only review your latest submission.
+                            </p>
+
+                            <div className="pt-2 flex flex-wrap items-center gap-4">
+                              <a
+                                href={st.receipt.pdfUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block bg-primary text-[#090D0F] px-4 py-2 rounded text-sm font-medium hover:bg-primary/90 transition-colors"
+                              >
+                                Download PDF
+                              </a>
+
+                              {st.receipt.timestamp && (
+                                <span className="text-[12px] text-textMuted/80 font-mono">
+                                  Last submitted: {new Date(st.receipt.timestamp).toLocaleString('en-IN', {
+                                    month: 'short',
+                                    day: 'numeric',
+                                    hour: 'numeric',
+                                    minute: '2-digit',
+                                    hour12: true
+                                  })}
+                                </span>
+                              )}
+                            </div>
                           </div>
-                        </div>
-                      )}
+                        )}
 
                       {!isRollVerified ? (
                         <div className="bg-[#090D0F] border border-borderLine rounded p-5 space-y-4">

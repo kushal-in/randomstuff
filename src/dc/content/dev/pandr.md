@@ -21,6 +21,10 @@ The analogy for the whole page:
 
 (Any snippet below that prints something assumes `#include <iostream>` at the top. I've left it out to keep things short.)
 
+
+<Fig src="/assets/meme3.jpeg" width="40%" />
+
+
 ## **Addresses**
 
 Every room has two things about it: what's inside, and where it is. Ask "what's in the room?" and the answer is "two beds, a fan that doesn't work, and a lot of Maggi packets." Ask "where's the room?" and the answer is "B-204." Two different questions, two different answers.

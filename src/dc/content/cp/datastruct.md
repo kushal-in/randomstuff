@@ -25,3 +25,6 @@ Go through the resources below before attempting the questions in the Codeforces
   - [GeeksforGeeks — Priority Queue](https://www.geeksforgeeks.org/dsa/priority-queue-set-1-introduction/)
 
 The questions based on these topics will be included in the **Codeforces contest**.
+
+
+<Fig src="/assets/meme4.jpeg" width="50%" />
