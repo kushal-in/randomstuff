@@ -7,7 +7,9 @@ export const CONFIG = {
 };
 // Add a page: add an entry here, then add .md blocks with `page: <key>`.
 export const PAGES = [
-  { key: 'apply', label: 'Overview and details' },
-  { key: 'cp', label: 'Competitive programming' },
-  { key: 'dev', label: 'Software Development' },
+  { key: 'apply', label: 'Overview & Details' },
+  { key: 'cp', label: 'Competitive Programming' },
+  { key: 'dev', label: 'Development' },
+  { key: 'feedback', label: 'Feedback' },
+  // { key: 'review', label: 'Review & Submit' }
 ];

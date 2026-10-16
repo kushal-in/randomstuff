@@ -19,8 +19,8 @@ export default {
       },
       fontFamily: {
         sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
-        mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
-        code: ['"Fira Code"', '"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+        mono: ['"JetBrains Mono"','"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+        code: ['"JetBrains Mono"', '"Fira Code"', 'ui-monospace', 'monospace'],
         sora: ['Sora', '"DM Sans"', 'ui-sans-serif', 'sans-serif'],
       },
       animation: {
