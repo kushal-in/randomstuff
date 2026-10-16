@@ -100,6 +100,7 @@ export const MD = ({ children }) => (
     prose-ul:my-3 prose-ol:my-3 prose-li:my-1
     prose-a:text-primary prose-a:no-underline hover:prose-a:underline hover:prose-a:text-primary/80
     prose-strong:text-white prose-strong:font-semibold
+    prose-code:before:content-none prose-code:after:content-none
   ">
     <Markdown
       remarkPlugins={[remarkMath, remarkGfm]}

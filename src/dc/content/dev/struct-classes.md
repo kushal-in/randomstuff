@@ -3,7 +3,7 @@ id: dev-struct-classes-r1
 page: dev
 sub: Structs & Classes
 type: reading
-order: 110
+order: 120
 ---
 
 
@@ -15,7 +15,7 @@ order: 110
 
 ### **What is OOP?**
 
-Reference link: [https://www.geeksforgeeks.org/cpp/object-oriented-programming-in-cpp/](https://www.geeksforgeeks.org/cpp/object-oriented-programming-in-cpp/) 
+Reference link: [https://www.geeksforgeeks.org/cpp/object-oriented-programming-in-cpp/](https://www.geeksforgeeks.org/cpp/object-oriented-programming-in-cpp/)
 
 OOP or Object Oriented Programming, put simply, is just a way of writing code that organises everything around a "blueprint" for a certain type of component, instead of writing repetitive code every time.
 

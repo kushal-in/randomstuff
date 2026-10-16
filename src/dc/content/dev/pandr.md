@@ -3,7 +3,7 @@ id: dev-pointers-ref
 page: dev
 sub: Pointers & References
 type: reading
-order: 130
+order: 110
 ---
 
 

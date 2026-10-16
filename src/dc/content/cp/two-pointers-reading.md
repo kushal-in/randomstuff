@@ -3,7 +3,7 @@ id: cp-two-pointers-reading
 page: cp
 sub: Two Pointers
 type: reading
-order: 110
+order: 120
 ---
 
 
@@ -78,6 +78,12 @@ Suppose we are given an array of n positive integers and a target sum x. We want
 ### **Time Complexity**
 
 The running time depends on how many steps the right pointer takes. A single turn may move it many steps, so there is no useful bound per turn. However, the right pointer only ever moves to the right, so over the whole algorithm it takes at most O(n) steps. The left pointer also moves at most O(n) steps. Hence the whole algorithm runs in O(n) time.
+
+
+**Practice:** CSES Given an array of n positive integers, find the number of subarrays having sum x. Keep the count for number of valid subarrays and run the same algorithm.
+
+Try submitting your solutions here: [https://codeforces.com/gym/102961/problem/ZA](https://codeforces.com/gym/102961/problem/ZA)
+
 
 ## **Bidirectional**
 
