@@ -9,7 +9,7 @@ order: 160
 
 All Competitive Programming questions are hosted in the custom Codeforces contest below.
 
-**[Open Codeforces Contest](codeforces.com)**
+**[Open Codeforces Contest](https://codeforces.com/group/du4g5GNE7E/contest/724949)**
 
 The problems are grouped by topic:
 
